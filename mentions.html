@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mentions Légales — GORYL SHOP</title>
+
+    <meta name="description" content="Mentions légales de GORYL SHOP — Marque streetwear premium. Informations légales, éditeur, hébergement et politique de confidentialité.">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Fonts non-bloquantes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap"
+          rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&display=swap"
+              rel="stylesheet">
+    </noscript>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ── Override body pour page légale ── */
+        body {
+            background: var(--black);
+            color: var(--white);
+            overflow-y: auto;
+        }
+
+        /* ── Header minimal ── */
+        .legal-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 72px;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--black-border);
+            display: flex;
+            align-items: center;
+            padding: 0 48px;
+            z-index: 100;
+        }
+
+        .legal-nav-inner {
+            width: 100%;
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .legal-nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            text-decoration: none;
+        }
+
+        .legal-nav-logo img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            filter: brightness(0) invert(1);
+        }
+
+        .legal-nav-logo span {
+            font-size: 1rem;
+            font-weight: 900;
+            letter-spacing: 5px;
+            color: var(--white);
+            text-transform: uppercase;
+        }
+
+        .legal-nav-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--mint);
+            text-decoration: none;
+            transition: gap 0.3s ease;
+        }
+
+        .legal-nav-back:hover { gap: 16px; }
+
+        /* ── Page ── */
+        .legal-page {
+            min-height: 100vh;
+            padding: 120px 48px 80px;
+        }
+
+        .legal-container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        /* ── En-tête page ── */
+        .legal-page-header {
+            margin-bottom: 64px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid var(--black-border);
+            position: relative;
+        }
+
+        .legal-page-header::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--mint);
+            border-radius: 2px;
+        }
+
+        .legal-eyebrow {
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--mint);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .legal-eyebrow::before {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 1px;
+            background: var(--mint);
+        }
+
+        .legal-page-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            letter-spacing: -1px;
+            text-transform: uppercase;
+            color: var(--white);
+            line-height: 1.05;
+            margin-bottom: 16px;
+        }
+
+        .legal-page-title span { color: var(--mint); }
+
+        .legal-date {
+            font-size: 0.7rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: var(--white-40);
+            text-transform: uppercase;
+        }
+
+        /* ── Sections ── */
+        .legal-section {
+            margin-bottom: 56px;
+            padding-bottom: 56px;
+            border-bottom: 1px solid var(--black-border);
+        }
+
+        .legal-section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .legal-section-number {
+            font-size: 0.55rem;
+            font-weight: 900;
+            letter-spacing: 4px;
+            color: var(--mint);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .legal-section-number::before {
+            content: '';
+            display: block;
+            width: 16px;
+            height: 1px;
+            background: var(--mint);
+        }
+
+        .legal-section h2 {
+            font-size: 1rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--white);
+            margin-bottom: 24px;
+        }
+
+        .legal-section p,
+        .legal-section address {
+            font-size: 0.875rem;
+            font-weight: 300;
+            line-height: 1.95;
+            color: var(--white-70);
+            font-style: normal;
+            margin-bottom: 16px;
+        }
+
+        .legal-section p:last-child { margin-bottom: 0; }
+
+        .legal-section a {
+            color: var(--mint);
+            font-weight: 700;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .legal-section a:hover { color: var(--white); }
+
+        /* ── Bloc highlight ── */
+        .legal-highlight {
+            background: var(--black-card);
+            border: 1px solid var(--black-border);
+            border-left: 3px solid var(--mint);
+            border-radius: var(--radius-sm);
+            padding: 24px 28px;
+            margin-top: 20px;
+        }
+
+        .legal-highlight p {
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+        }
+
+        .legal-highlight p:last-child { margin-bottom: 0; }
+
+        .legal-highlight strong {
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        /* ── Table infos ── */
+        .legal-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .legal-table tr {
+            border-bottom: 1px solid var(--black-border);
+        }
+
+        .legal-table tr:last-child { border-bottom: none; }
+
+        .legal-table td {
+            padding: 14px 0;
+            font-size: 0.82rem;
+            font-weight: 300;
+            color: var(--white-70);
+            line-height: 1.6;
+            vertical-align: top;
+        }
+
+        .legal-table td:first-child {
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: 1px;
+            width: 38%;
+            padding-right: 24px;
+        }
+
+        /* ── Tag badge colorblind ── */
+        .legal-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            background: var(--mint-glow);
+            border: 1px solid var(--mint);
+            border-radius: var(--radius-sm);
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--mint);
+            margin-bottom: 16px;
+        }
+
+        /* ── Footer page légale ── */
+        .legal-footer {
+            margin-top: 80px;
+            padding-top: 40px;
+            border-top: 1px solid var(--black-border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .legal-footer p {
+            font-size: 0.65rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: var(--white-40);
+            text-transform: uppercase;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--mint);
+            text-decoration: none;
+            transition: gap 0.3s ease;
+        }
+
+        .back-link:hover { gap: 20px; }
+
+        /* ── Responsive ── */
+        @media (max-width: 768px) {
+            .legal-nav { padding: 0 24px; }
+            .legal-page { padding: 100px 24px 60px; }
+            .legal-table td { display: block; width: 100%; padding: 8px 0; }
+            .legal-table td:first-child { padding-bottom: 4px; }
+            .legal-footer { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── NAV MINIMALE ── -->
+    <nav class="legal-nav" role="navigation" aria-label="Navigation mentions légales">
+        <div class="legal-nav-inner">
+            <a href="index.html" class="legal-nav-logo" aria-label="Retour à l'accueil GORYL SHOP">
+                <img src="GOLYL77.webp" alt="GORYL" width="32" height="32">
+                <span>GORYL</span>
+            </a>
+            <a href="index.html" class="legal-nav-back" aria-label="Retour au site">
+                ← Retour au site
+            </a>
+        </div>
+    </nav>
+
+    <!-- ── CONTENU ── -->
+    <main class="legal-page" id="main-content">
+        <div class="legal-container">
+
+            <!-- EN-TÊTE -->
+            <div class="legal-page-header">
+                <div class="legal-eyebrow">Documents officiels</div>
+                <h1 class="legal-page-title">
+                    Mentions <span>Légales</span>
+                </h1>
+                <p class="legal-date">Dernière mise à jour — Juin 2025</p>
+            </div>
+
+            <!-- 01 — ÉDITEUR -->
+            <div class="legal-section">
+                <div class="legal-section-number">01</div>
+                <h2>Éditeur du site</h2>
+
+                <div class="legal-badge">Informations légales</div>
+
+                <div class="legal-highlight">
+                    <table class="legal-table">
+                        <tr>
+                            <td>Nom de la marque</td>
+                            <td>GORYL SHOP</td>
+                        </tr>
+                        <tr>
+                            <td>Statut</td>
+                            <td>Entreprise individuelle</td>
+                        </tr>
+                        <tr>
+                            <td>Email de contact</td>
+                            <td>
+                                <a href="mailto:goryl.store@gmail.com">
+                                    goryl.store@gmail.com
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Pays</td>
+                            <td>France</td>
+                        </tr>
+                        <tr>
+                            <td>Site web</td>
+                            <td>
+                                <a href="https://goryl-shop.com"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    goryl-shop.com
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 02 — HÉBERGEMENT -->
+            <div class="legal-section">
+                <div class="legal-section-number">02</div>
+                <h2>Hébergement</h2>
+
+                <p>
+                    Le site GORYL SHOP est hébergé via la plateforme
+                    <strong style="color: var(--white);">Websim</strong>.
+                    La boutique e-commerce est opérée en partenariat avec
+                    <strong style="color: var(--white);">Tunetoo</strong>,
+                    spécialiste du Print on Demand et de la production textile à la demande.
+                </p>
+
+                <div class="legal-highlight">
+                    <table class="legal-table">
+                        <tr>
+                            <td>Hébergeur site</td>
+                            <td>
+                                Websim —
+                                <a href="https://websim.ai"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    websim.ai
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Partenaire boutique</td>
+                            <td>
+                                Tunetoo —
+                                <a href="https://www.tunetoo.com"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    tunetoo.com
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Boutique partenaire</td>
+                            <td>
+                                <a href="https://goryl-shop.tunetoo.com"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    goryl-shop.tunetoo.com
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 03 — PROPRIÉTÉ INTELLECTUELLE -->
+            <div class="legal-section">
+                <div class="legal-section-number">03</div>
+                <h2>Propriété intellectuelle</h2>
+
+                <p>
+                    L'ensemble des éléments constituant le site GORYL SHOP — nom de marque,
+                    logo gorille, visuels, textes, slogans, charte graphique et design —
+                    sont la propriété exclusive de GORYL SHOP et sont protégés par les lois
+                    françaises et internationales relatives à la propriété intellectuelle.
+                </p>
+
+                <p>
+                    Toute reproduction, représentation, modification, publication ou adaptation
+                    de tout ou partie des éléments du site, quel que soit le moyen ou le procédé
+                    utilisé, est interdite sans l'autorisation écrite préalable de GORYL SHOP.
+                </p>
+
+                <div class="legal-highlight">
+                    <p>
+                        <strong>Slogan protégé :</strong>
+                        « Fashion That Fades Others » est une expression distinctive
+                        de la marque GORYL SHOP. Toute utilisation non autorisée
+                        fera l'objet de poursuites.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 04 — COMMANDES ET LIVRAISON -->
+            <div class="legal-section">
+                <div class="legal-section-number">04</div>
+                <h2>Commandes et livraison</h2>
+
+                <p>
+                    Les commandes passées sur la boutique GORYL SHOP sont traitées
+                    et expédiées par notre partenaire Tunetoo, spécialiste de la
+                    production et de la livraison de vêtements Print on Demand.
+                </p>
+
+                <p>
+                    La production, l'expédition, le suivi de commande et le
+                    service après-vente relatifs aux produits sont gérés
+                    directement par Tunetoo conformément à leurs conditions
+                    générales de vente disponibles sur
+                    <a href="https://www.tunetoo.com"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                        tunetoo.com
+                    </a>.
+                </p>
+
+                <div class="legal-highlight">
+                    <p>
+                        <strong>Pour toute question relative à une commande :</strong>
+                    </p>
+                    <p>
+                        Contact GORYL SHOP —
+                        <a href="mailto:goryl.store@gmail.com">
+                            goryl.store@gmail.com
+                        </a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- 05 — DONNÉES PERSONNELLES / RGPD -->
+            <div class="legal-section">
+                <div class="legal-section-number">05</div>
+                <h2>Données personnelles — RGPD</h2>
+
+                <p>
+                    Conformément au Règlement Général sur la Protection des Données
+                    (RGPD — Règlement UE 2016/679) et à la loi Informatique et Libertés,
+                    GORYL SHOP s'engage à protéger les données personnelles de ses visiteurs.
+                </p>
+
+                <p>
+                    Les données collectées via le formulaire de newsletter
+                    (adresse email uniquement) sont utilisées exclusivement pour
+                    l'envoi d'informations relatives aux nouvelles collections et
+                    offres de GORYL SHOP. Elles ne sont jamais vendues ni transmises
+                    à des tiers à des fins commerciales.
+                </p>
+
+                <div class="legal-highlight">
+                    <p>
+                        <strong>Vos droits :</strong> Conformément au RGPD, vous disposez
+                        d'un droit d'accès, de rectification, de suppression et d'opposition
+                        concernant vos données personnelles.
+                    </p>
+                    <p>
+                        Pour exercer ces droits, contactez-nous à :
+                        <a href="mailto:goryl.store@gmail.com">goryl.store@gmail.com</a>
+                    </p>
+                </div>
+
+                <p>
+                    Les commandes passées via la boutique Tunetoo sont soumises
+                    à la politique de confidentialité de Tunetoo disponible sur
+                    leur site officiel.
+                </p>
+            </div>
+
+            <!-- 06 — COOKIES -->
+            <div class="legal-section">
+                <div class="legal-section-number">06</div>
+                <h2>Cookies</h2>
+
+                <p>
+                    Le site GORYL SHOP utilise des cookies techniques nécessaires
+                    au bon fonctionnement de la navigation. Aucun cookie de traçage
+                    publicitaire n'est déposé sans votre consentement explicite.
+                </p>
+
+                <p>
+                    La boutique intégrée via Tunetoo peut déposer ses propres cookies
+                    fonctionnels nécessaires au traitement des commandes. En naviguant
+                    sur la section boutique, vous acceptez ces cookies fonctionnels.
+                </p>
+            </div>
+
+            <!-- 07 — RESPONSABILITÉ -->
+            <div class="legal-section">
+                <div class="legal-section-number">07</div>
+                <h2>Limitation de responsabilité</h2>
+
+                <p>
+                    GORYL SHOP s'efforce d'assurer l'exactitude et la mise à jour
+                    des informations diffusées sur ce site. Cependant, GORYL SHOP
+                    ne peut garantir l'exactitude, la précision ou l'exhaustivité
+                    des informations mises à disposition sur ce site.
+                </p>
+
+                <p>
+                    GORYL SHOP décline toute responsabilité pour toute interruption
+                    du site, survenance de bugs, ou inexactitude dans les informations
+                    diffusées sur le site.
+                </p>
+
+                <p>
+                    Les prix et disponibilités des produits affichés dans la boutique
+                    Tunetoo sont sous la responsabilité de Tunetoo et peuvent être
+                    modifiés sans préavis.
+                </p>
+            </div>
+
+            <!-- 08 — DROIT APPLICABLE -->
+            <div class="legal-section">
+                <div class="legal-section-number">08</div>
+                <h2>Droit applicable</h2>
+
+                <p>
+                    Les présentes mentions légales sont régies par le droit français.
+                    En cas de litige, et après tentative de résolution amiable,
+                    les tribunaux français seront seuls compétents.
+                </p>
+
+                <p>
+                    Pour toute réclamation ou question juridique, vous pouvez
+                    nous contacter à l'adresse :
+                    <a href="mailto:goryl.store@gmail.com">goryl.store@gmail.com</a>
+                </p>
+            </div>
+
+            <!-- ── FOOTER PAGE LÉGALE ── -->
+            <div class="legal-footer">
+                <p>&copy; 2025 GORYL SHOP. All Rights Reserved.</p>
+                <a href="index.html" class="back-link" aria-label="Retour à l'accueil">
+                    ← Retour à l'accueil
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
